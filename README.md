@@ -2,14 +2,14 @@
 ## Definition of Done
 
 ### Funcionales: 
-  -Que cumpla con todos los criterios de aceptación de la user story
-  -Funcionalidad sin dependencia
-  -Unit test coverage 80% 
-  -Documentación completa
-  -Comentar métodos y funcionalidades
-  -Sin defectos conocidos
+  - Que cumpla con todos los criterios de aceptación de la user story
+  - Funcionalidad sin dependencia
+  - Unit test coverage 80% 
+  - Documentación completa
+  - Comentar métodos y funcionalidades
+  - Sin defectos conocidos
 ### No funcionales:
-  -Sistema de fácil acceso
+  - Sistema de fácil acceso
 
 
 
