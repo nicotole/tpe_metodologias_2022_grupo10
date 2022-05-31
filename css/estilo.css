@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Readex Pro', sans-serif;
+}
+
+body{
+	background: #eee;
+}
+
+#tabla td input{
+	background: white !important;
+	color: black;
+}
+
+#tabla td select{
+	border-style: hidden;
+	border-bottom: 1px solid black;
+}
+
+.sidebar{
+	position: fixed;
+	width: 14%;
+	height: 100%;
+	background: #95cdff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sidebar h2{
+	text-align: center;
+	padding: 1%;
+}
+
+.sidebar ul{
+	padding: 0;
+}
+
+.wrapper, .contenedorCentral{
+	max-height: 100px;
+}
+
+.sidebar{
+	height: 100vh;
+}
+
+.sidebar ul li{
+	margin: 5% 0;
+	padding: 8%;
+	text-align: center;
+	transition: 0.5s;
+}
+
+.pintado{
+	background: #cfe8ff;
+}
+
+.sidebar ul li:hover{
+	transition: 0.5s;
+	background: #cfe8ff;
+}
+
+.sidebar ul li a{
+	color: black;
+	display: block;
+}
+
+
+.contenedorCentral .titulo{
+    justify-content: left;
+	margin: 0% 15%;
+	padding: 2.5% 0 1% 0;
+	width: 83%;
+	border-bottom: 3px solid black;
+}
+
+.contenedorCentral{
+    margin: 0;
+}
+
+#tabla{
+    margin: 0 15%;
+	width: 83%;
+	border-collapse: separate;
+    border-spacing: 0 15px;
+	text-align: center;
+}
+
+table tbody tr{
+    border : 1px solid rgb(0, 0, 0);
+	/* border-radius: 10px;
+	box-shadow: 3px 3px 5px 1px rgb(201, 201, 201); */
+}
+
+.sidebar .tituloAside{
+    justify-content: center;
+	margin: 9% 5%;
+	border-bottom: 3px solid black;
+}
+
+.btn-nuevoTurno{
+	margin: 7% 0;
+	transition: 0.2s;
+	background-color: #95cdff;
+	border: 1px solid black;
+	padding: 5% 13%;
+	border-radius: 6px;
+}
+
+.btn-nuevoTurno:hover{
+	transition: 0.2s;
+	background-color: #95cdff;
+	font-weight: bold;
+	padding: 5% 16%;
+	box-shadow: 3px 3px 5px 1px rgb(201, 201, 201);
+}
+
+.contenedorCentral input{
+	border: none;
+	background-color: rgba(201, 201, 201, 0.295);
+	border-bottom: 1px solid black;
+}
+
+.contenedorCentral input:focus{
+	border: none;
+	background-color: rgba(90, 90, 90, 0.13);
+}
+
+#tabla .fields{
+	padding-top: 23px;
+}
