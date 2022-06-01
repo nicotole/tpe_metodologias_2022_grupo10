@@ -10,7 +10,14 @@ class TurnosView{
         $this->smarty->assign('BASE_URL',BASE_URL);
     }
 
-function verTurnos($turnos){
+    function nuevoTurno($medicos, $pacientes){
+        $this->smarty->assign('titulo', " Nuevo turno");
+        $this->smarty->assign('medicos', $medicos);
+        $this->smarty->assign('pacientes', $pacientes);
+        $this->smarty->display('templates/nuevoTurno.tpl');
+    }
+    
+    function verTurnos($turnos){
         $this->smarty->assign('titulo', " Proximo turno");
         $this->smarty->assign('turno', $turnos);
         $this->smarty->display('templates/proximoTurno.tpl');

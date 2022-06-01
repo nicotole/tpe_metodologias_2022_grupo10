@@ -22,5 +22,27 @@ class TurnosModel{
         return $turnos;
     }
 
+    public function getPacientes(){
+        $sentencia = $this->db->prepare("SELECT nombre, apellido, dni, nro_afiliado as afiliado 
+                                            FROM paciente" );
+        $sentencia->execute();
+        $pacientes = $sentencia->fetchAll(PDO::FETCH_OBJ);       
+        return $pacientes;
+    }
 
+    public function getMedicos(){
+        $sentencia = $this->db->prepare("SELECT nombre, apellido, id_medico as id
+                                            FROM medico" );
+        $sentencia->execute();
+        $medicos = $sentencia->fetchAll(PDO::FETCH_OBJ);       
+        return $medicos;
+    }
+
+    // Crear un turno nuevo, tambien ponerlo con paciente y medico?
+    public function AgregarTurno($id_medico, $dni, $nro_afiliado, $tipo_de_turno, $horario, $fecha) {
+        $sentencia = $this->db->prepare('INSERT INTO turno(id_medico, dni, nro_afiliado, tipo_de_turno, horario, fecha) 
+                                            VALUES(?,?,?,?,?,?)');
+        $sentencia->execute([$id_medico, $dni, $nro_afiliado, $tipo_de_turno, $horario, $fecha]); 
+        return $this->db->lastInsertId();
+    }
 }
