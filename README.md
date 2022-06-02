@@ -19,6 +19,8 @@ https://www.youtube.com/watch?v=X8uRuTX_XbE
 ### Link a presentacion Slides
 https://docs.google.com/presentation/d/1txM4sA4tBQ-Est7rmZRBg5_g_7p_J8lHLPxxVAqG3RE/edit?usp=sharing
 
+## Links generales
+
 ### Link a Jira
 https://metodologias2022-grupo10.atlassian.net/jira/software/projects/TPMG10/boards/2/backlog
 
