@@ -12,14 +12,22 @@
   - Sistema de fácil acceso.
 
 
+## Sprint nº1
+### Link presentacion Youtube
+https://www.youtube.com/watch?v=X8uRuTX_XbE
 
-## Link a Jira
+### Link a presentacion Slides
+https://docs.google.com/presentation/d/1txM4sA4tBQ-Est7rmZRBg5_g_7p_J8lHLPxxVAqG3RE/edit?usp=sharing
+
+## Links generales
+
+### Link a Jira
 https://metodologias2022-grupo10.atlassian.net/jira/software/projects/TPMG10/boards/2/backlog
 
-## Link a Miro
+### Link a Miro
 https://miro.com/welcomeonboard/SVkyWUFSQm96SXVEemlZd1AwTGhmUnkzTnkwd2pJUXdSSWdFcFZIRVVXWTRGVGVLdUNYRTJoRjFWTkVTT0hCMXwzNDU4NzY0NTI0ODY5NTU0MDIx?share_link_id=394472327013
 
-## Link a Figma
+### Link a Figma
 https://www.figma.com/file/nK7CuyTkOUjaPj7bIgWOx2/TandiLab?node-id=0%3A1 
 
 ### Development Team:

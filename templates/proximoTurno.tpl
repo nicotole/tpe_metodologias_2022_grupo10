@@ -5,7 +5,7 @@
 	<table id="tabla" class="table table-striped">
 		<thead>
 			<tr>
-            <th scope="col">Medico</th>
+            		<th scope="col">Médico</th>
 			<th scope="col">Especialidad</th>
 			<th scope="col">Paciente</th>
 			<th scope="col">Turno</th>
