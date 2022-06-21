@@ -7,10 +7,10 @@
         <table id="tabla" class="table table-striped">
 			<thead>
 				<tr>
-					<th scope="col">Medico</th>
+					<th scope="col">Médico</th>
 					<th scope="col">Paciente</th>
-					<th scope="col">Dni paciente</th>
-					<th scope="col">Nro afiliado</th>
+					<th scope="col">D.N.I. paciente</th>
+					<th scope="col">N.º afiliado</th>
 					<th scope="col">Turno</th>
 					<th scope="col">Horario</th>
 					<th scope="col">Fecha</th>
