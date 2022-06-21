@@ -40,13 +40,24 @@ class TurnosController{
             $horario = $_POST['input_horario'];
             $fecha = $_POST['input_fecha'];
            
+            $turnos = $this->model->GetTurnos();
+            $yaExiste = false;  
+
+        foreach ($turnos as $turno) {
+            if (($turno->id_medico == $id_medico) && ($turno->fecha == $fecha) && ($horario == substr($turno->horario, 0, 5))) {
+                //Arreglar que siempre entra al if
+                echo '<script language="javascript">alert("Ya existe un turno en ese horario");</script>';
+                $yaExiste = true;
+                self::nuevoTurno();
+                break;
+            }
+        }
+        if(!$yaExiste){ 
             $this->model->AgregarTurno($id_medico, $dni, $nro_afiliado, $tipo_de_turno, $horario, $fecha);
             $this->view->ShowHomeLocation();
-        
-        }else{
-            echo '<script language="javascript">alert("Datos incompletos, por favor completar todos los campos");</script>';
-            
         }
+    }else{
+        echo '<script language="javascript">alert("Datos incompletos, por favor completar todos los campos");</script>';
         self::nuevoTurno();
     }
 
