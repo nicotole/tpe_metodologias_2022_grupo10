@@ -45,6 +45,8 @@ class TurnosModel{
         $sentencia->execute([$id_medico, $dni, $nro_afiliado, $tipo_de_turno, $horario, $fecha]); 
         return $this->db->lastInsertId();
     }
+<<<<<<< HEAD
+=======
 
     public function BorrarTurno($id_turno) {
         $sentencia = $this->db->prepare('DELETE FROM turno 
@@ -53,4 +55,5 @@ class TurnosModel{
         return $sentencia->fetch(PDO::FETCH_OBJ);
     }
 
+>>>>>>> a88917321480b415945dead93598ea39779feced
 }
