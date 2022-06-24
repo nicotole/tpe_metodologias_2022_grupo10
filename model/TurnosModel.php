@@ -54,4 +54,14 @@ class TurnosModel{
         return $sentencia->fetch(PDO::FETCH_OBJ);
     }
 
+    public function getMedicosPorEspecialidad($especialidad){
+        /*Retorna el nombre, apellido y id de los medicos segun la especialidad requerida
+        */
+        $sentencia = $this->db->prepare("SELECT nombre, apellido, id_medico 
+                                            FROM medico 
+                                            WHERE especialidad = ?");
+        $sentencia->execute(array($especialidad));
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
+
 }
