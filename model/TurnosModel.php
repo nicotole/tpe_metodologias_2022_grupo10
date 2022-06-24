@@ -64,4 +64,13 @@ class TurnosModel{
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function getMedicosPorObraSocial($obraSocial){
+        /*Retorna el nombre, apellido y id de los medicos segun la obra social requerida
+        */
+        $sentencia = $this->db->prepare("SELECT nombre, apellido, id_medico 
+                                            FROM medico 
+                                            WHERE obra_social = ?");
+        $sentencia->execute(array($obraSocial));
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
 }
