@@ -4,7 +4,7 @@
 			</div>
 			<ul>
 
-				<li><a href="inicio">Proximos turnos</a></li>
+				<li><a href="inicio">Próximos turnos</a></li>
 				<li ><a href="nuevoTurno">Nuevo turno</a></li>
 				<li><a href="#">Horarios médico</a></li>
 				<li><a href="#">Nueva configuración</a></li>
