@@ -136,3 +136,45 @@ table tbody tr{
 #tabla .fields{
 	padding-top: 23px;
 }
+
+
+
+
+
+
+
+.contenedorCentral .subtitulo{
+	justify-content: left;
+	margin: 0% 15%;
+	padding: 2.5% 0 1% 0;
+	width: 70%;
+
+}
+
+.contenedorCentral .formPaciente{
+	justify-content: left;
+	margin: 0% 15%;
+	padding: 2.5% 0 1% 0;
+	width: 40%;
+
+}
+
+
+.inputPaciente{
+	border-radius: 15px;
+	width: 100%;
+	margin-bottom: 5%;
+	background-color: rgba(201, 201, 201, 0.295);
+	border-bottom: 1px solid black;
+}
+
+
+.btn-nuevoTurnoPaciente{
+	margin: 7% 0;
+	transition: 0.2s;
+	background-color: #95cdff;
+	border: 1px solid black;
+	padding: 5% 10%;
+	border-radius: 6px;
+	width: 100%;
+}

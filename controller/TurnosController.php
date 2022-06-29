@@ -61,7 +61,8 @@ class TurnosController{
         self::nuevoTurno();
     }
 
-
+    }
+    
     function EliminarTurno($id_turno ){       
         $this->model->BorrarTurno($id_turno);
         $this->view->ShowHomeLocation();
