@@ -31,7 +31,7 @@ class TurnosModel{
     }
 
     public function getMedicos(){
-        $sentencia = $this->db->prepare("SELECT nombre, apellido, id_medico as id
+        $sentencia = $this->db->prepare("SELECT *, id_medico as id
                                             FROM medico" );
         $sentencia->execute();
         $medicos = $sentencia->fetchAll(PDO::FETCH_OBJ);       
@@ -45,7 +45,6 @@ class TurnosModel{
         $sentencia->execute([$id_medico, $dni, $nro_afiliado, $tipo_de_turno, $horario, $fecha]); 
         return $this->db->lastInsertId();
     }
-
 
     public function BorrarTurno($id_turno) {
         $sentencia = $this->db->prepare('DELETE FROM turno 
@@ -72,5 +71,21 @@ class TurnosModel{
                                             WHERE obra_social = ?");
         $sentencia->execute(array($obraSocial));
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function getEspecialidades(){
+        $sentencia = $this->db->prepare("SELECT DISTINCT especialidad 
+                                            FROM medico" );
+        $sentencia->execute();
+        $especialidades = $sentencia->fetchAll(PDO::FETCH_OBJ);       
+        return $especialidades;
+    }
+
+    public function getObrasSociales(){
+        $sentencia = $this->db->prepare("SELECT DISTINCT obra_social 
+                                            FROM medico" );
+        $sentencia->execute();
+        $obras = $sentencia->fetchAll(PDO::FETCH_OBJ);       
+        return $obras;
     }
 }

@@ -9,6 +9,10 @@
 	font-family: 'Readex Pro', sans-serif;
 }
 
+.hidden{
+	display: none;
+}
+
 body{
 	background: #eee;
 }
@@ -137,11 +141,7 @@ table tbody tr{
 	padding-top: 23px;
 }
 
-
-
-
-
-
+/* Estilo de sacar turno paciente */
 
 .contenedorCentral .subtitulo{
 	justify-content: left;
@@ -177,4 +177,9 @@ table tbody tr{
 	padding: 5% 10%;
 	border-radius: 6px;
 	width: 100%;
+}
+
+.contenedorCentral .alertConfirmacion{
+	color: #CB4A4A;
+	text-align: center;
 }

@@ -24,9 +24,7 @@ if($action == ''){
             $TurnosController->EliminarTurno($partesURL[1]);
         }elseif($partesURL[0] == "nuevoTurno") {
             $TurnosController->nuevoTurno();
-        }  
-        
-        elseif($partesURL[0] == "nuevoTurnoPacPaso1") {
+        }elseif($partesURL[0] == "nuevoTurnoPacPaso1") {
             $PacienteController->nuevoTurnoPacientePaso1();
         } 
     }
