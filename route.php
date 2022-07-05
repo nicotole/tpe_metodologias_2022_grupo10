@@ -24,8 +24,14 @@ if($action == ''){
             $TurnosController->EliminarTurno($partesURL[1]);
         }elseif($partesURL[0] == "nuevoTurno") {
             $TurnosController->nuevoTurno();
+        // elseif($partesURL[0] == "nuevoTurnoPac") {
+        //     $PacienteController->nuevoTurnoPaciente();
+        }elseif($partesURL[0] == "imprimirDatos") {
+            $PacienteController->imprimirDatos();
         }elseif($partesURL[0] == "nuevoTurnoPacPaso1") {
             $PacienteController->nuevoTurnoPacientePaso1();
-        } 
+        }elseif($partesURL[0] == "confirmarDatos") {
+            $PacienteController->confirmarDatos();   
     }
+}
 }

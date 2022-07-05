@@ -11,7 +11,7 @@ class TurnosModel{
 
     public function GetTurnos(){
 
-        $sentencia = $this->db->prepare("SELECT m.id_medico, m.nombre as nombre_medico, m.apellido as apellido_medico, m.especialidad, p.nombre as nombre_paciente, t.tipo_de_turno, t.horario, t.id_turno as id_turno, t.fecha
+        $sentencia = $this->db->prepare("SELECT m.id_medico, m.nombre as nombre_medico, m.apellido as apellido_medico, m.especialidad, p.nombre as nombre_paciente, p.apellido as apellido_paciente, t.tipo_de_turno, t.horario, t.id_turno as id_turno, t.fecha
                                             FROM turno t
                                             JOIN medico m ON (t.id_medico = m.id_medico)
                                             JOIN paciente p ON (t.dni = p.dni) AND (t.nro_afiliado = p.nro_afiliado)
@@ -30,6 +30,7 @@ class TurnosModel{
         return $pacientes;
     }
 
+   
     public function getMedicos(){
         $sentencia = $this->db->prepare("SELECT *, id_medico as id
                                             FROM medico" );
@@ -45,6 +46,7 @@ class TurnosModel{
         $sentencia->execute([$id_medico, $dni, $nro_afiliado, $tipo_de_turno, $horario, $fecha]); 
         return $this->db->lastInsertId();
     }
+
 
     public function BorrarTurno($id_turno) {
         $sentencia = $this->db->prepare('DELETE FROM turno 
@@ -81,6 +83,17 @@ class TurnosModel{
         return $especialidades;
     }
 
+    public function getMedico($id){
+        /*Retorna el nombre, apellido y id de los medicos segun la obra social requerida
+        */
+        $sentencia = $this->db->prepare("SELECT * 
+                                            FROM medico 
+                                            WHERE id_medico = ?");
+        $sentencia->execute(array($id));
+        return $sentencia->fetch(PDO::FETCH_OBJ);
+    }
+    
+   
     public function getObrasSociales(){
         $sentencia = $this->db->prepare("SELECT DISTINCT obra_social 
                                             FROM medico" );
@@ -88,4 +101,5 @@ class TurnosModel{
         $obras = $sentencia->fetchAll(PDO::FETCH_OBJ);       
         return $obras;
     }
+
 }

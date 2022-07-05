@@ -183,3 +183,20 @@ table tbody tr{
 	color: #CB4A4A;
 	text-align: center;
 }
+
+.contenedorCentral .formPaciente{
+	justify-content: left;
+	margin: 0% 15%;
+	padding: 2.5% 0 1% 0;
+	width: 40%;
+}
+
+.btn-nuevoTurnoPaciente{
+	margin: 7% 0;
+	transition: 0.2s;
+	background-color: #95cdff;
+	border: 1px solid black;
+	padding: 5% 10%;
+	border-radius: 6px;
+	width: 100%;
+}

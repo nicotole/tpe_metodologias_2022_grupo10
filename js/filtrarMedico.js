@@ -45,6 +45,20 @@ function cobraDiferencial(){
 
 document.querySelector("[name='select_medico']").addEventListener("change", cobraDiferencial);
 
+function distintaObraSocial(){
+  let obraMedico = document.querySelector("[name='select_medico']").options[this.selectedIndex].dataset.obra;
+  let obraPaciente = document.querySelector("#obra_paciente").value;
+  if(obraMedico == obraPaciente){
+      document.querySelectorAll(".alertConfirmacion")[1].classList.add("hidden");
+      console.log("cacona");
+  }else{
+      document.querySelectorAll(".alertConfirmacion")[1].classList.remove("hidden");
+      console.log("cacona2");
+  }
+}
+
+document.querySelector("[name='select_medico']").addEventListener("change", distintaObraSocial);
+
 Array.from(
   document.querySelector("#formPaciente").getElementsByTagName("select")
 ).forEach(function (item) {
