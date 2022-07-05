@@ -200,3 +200,19 @@ table tbody tr{
 	border-radius: 6px;
 	width: 100%;
 }
+
+.confirmacionTurno{
+	display: flex;
+	margin: 0% 15%;
+	padding: 2.5% 0 1% 0;
+	background-color: lightgrey;
+	border: 1px solid grey;
+	border-radius: 15px;
+}
+
+.datosPaciente{
+	margin-left: 100px;
+}
+.datosTurno{
+	margin-left: 200px;
+}

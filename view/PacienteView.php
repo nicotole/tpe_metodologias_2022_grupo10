@@ -28,7 +28,7 @@ class PacienteView{
 
     function imprimirTurno($nombre, $apellido, $dni, $telefono,  $email, $direccion, $obra_social, $nro_afiliado, $medico, $especialidad, $horario, $fecha, $t){
         $this->smarty->assign('titulo', " Nuevo turno");
-        $this->smarty->assign('subtitulo', "Turno confirmado con exito");
+        $this->smarty->assign('subtitulo', "Turno confirmado con exito!");
         $this->smarty->assign('medico', $medico);
         $this->smarty->assign('nombre', $nombre);
         $this->smarty->assign('apellido', $apellido);
