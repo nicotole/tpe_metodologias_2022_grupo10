@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2022 a las 00:25:42
+-- Tiempo de generación: 06-07-2022 a las 00:55:37
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -32,24 +32,25 @@ CREATE TABLE `medico` (
   `nombre` varchar(20) NOT NULL,
   `apellido` varchar(20) NOT NULL,
   `obra_social` varchar(20) NOT NULL,
-  `especialidad` varchar(20) NOT NULL
+  `especialidad` varchar(20) NOT NULL,
+  `cobra_diferencial` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `medico`
 --
 
-INSERT INTO `medico` (`id_medico`, `nombre`, `apellido`, `obra_social`, `especialidad`) VALUES
-(1, 'Thurstan', 'Parvin', 'IOMA', 'Dermatologo'),
-(2, 'Alexandr', 'Hansel', 'IOMA', 'Dermatologo'),
-(3, 'Roderigo', 'Sheere', 'PAMI', 'Dermatologo'),
-(4, 'Mei', 'Dewer', 'PAMI', 'Cardiologo'),
-(5, 'Hansiain', 'Grinikhinov', 'PAMI', 'Cardiologo'),
-(6, 'Kirby', 'Cowill', 'UNION PERSONAL', 'Cardiologo'),
-(7, 'Ramonda', 'Humbatch', 'UNION PERSONAL', 'Cardiologo'),
-(8, 'Cody', 'Crippin', 'OSDE', 'Pediatra'),
-(9, 'Jo-anne', 'Durie', 'OSDE', 'Pediatra'),
-(10, 'Tiebold', 'Le Provest', 'OSDE', 'Pediatra');
+INSERT INTO `medico` (`id_medico`, `nombre`, `apellido`, `obra_social`, `especialidad`, `cobra_diferencial`) VALUES
+(1, 'Thurstan', 'Parvin', 'IOMA', 'Dermatologo', 1),
+(2, 'Alexandr', 'Hansel', 'IOMA', 'Dermatologo', 0),
+(3, 'Roderigo', 'Sheere', 'PAMI', 'Dermatologo', 0),
+(4, 'Mei', 'Dewer', 'PAMI', 'Cardiologo', 0),
+(5, 'Hansiain', 'Grinikhinov', 'PAMI', 'Cardiologo', 0),
+(6, 'Kirby', 'Cowill', 'UNION PERSONAL', 'Cardiologo', 0),
+(7, 'Ramonda', 'Humbatch', 'UNION PERSONAL', 'Cardiologo', 0),
+(8, 'Cody', 'Crippin', 'OSDE', 'Pediatra', 0),
+(9, 'Jo-anne', 'Durie', 'OSDE', 'Pediatra', 0),
+(10, 'Tiebold', 'Le Provest', 'OSDE', 'Pediatra', 0);
 
 -- --------------------------------------------------------
 
@@ -105,9 +106,10 @@ CREATE TABLE `turno` (
 --
 
 INSERT INTO `turno` (`id_turno`, `tipo_de_turno`, `horario`, `fecha`, `id_medico`, `dni`, `nro_afiliado`) VALUES
-(2, 'm', '21:00:00', '2022-06-29', 5, 22956227, 1992566847),
-(4, 't', '22:30:00', '2022-06-24', 3, 84252921, 2147483647),
-(5, 'm', '10:33:00', '2022-06-13', 3, 94934131, 2147483647);
+(11, 't', '17:00:00', '2022-07-20', 1, 21362591, 2147483647),
+(12, 't', '17:00:00', '2022-07-20', 2, 21362591, 2147483647),
+(13, 't', '17:00:00', '2022-07-20', 10, 21362591, 2147483647),
+(14, 't', '17:00:00', '2022-07-20', 7, 21362591, 2147483647);
 
 --
 -- Índices para tablas volcadas
@@ -156,7 +158,7 @@ ALTER TABLE `paciente`
 -- AUTO_INCREMENT de la tabla `turno`
 --
 ALTER TABLE `turno`
-  MODIFY `id_turno` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_turno` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas

@@ -8,6 +8,3 @@ function setDni() {
     
 }
 document.querySelector("[name='select_paciente']").addEventListener("change", setDni);
-
-      
-

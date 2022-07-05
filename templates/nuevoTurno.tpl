@@ -33,8 +33,8 @@
 									<option data-afiliado={$paciente->afiliado}  value="{$paciente->dni}">{$paciente->nombre} {$paciente->apellido}</option>														
 								{/foreach}
 							</select></td>
-						<td class="fields"><input type="number" readonly name="input_dni" id= "paciente_dni" ></td>
-							<td class="fields"><input type="number" readonly name="input_nroAfiliado"  id= "afiliado"></td>
+						<td class="fields"><input type="number" readonly name="input_dni" id= "paciente_dni"></td>
+						<td class="fields"><input type="number" readonly name="input_nroAfiliado"  id= "afiliado"></td>
 						<td class="fields"><select name="select_turno"> 							
 									<option value="t">Tarde</option>
 									<option value="m">Mañana</option>
