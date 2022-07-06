@@ -50,10 +50,8 @@ function distintaObraSocial(){
   let obraPaciente = document.querySelector("#obra_paciente").value;
   if(obraMedico == obraPaciente){
       document.querySelectorAll(".alertConfirmacion")[1].classList.add("hidden");
-      console.log("cacona");
   }else{
       document.querySelectorAll(".alertConfirmacion")[1].classList.remove("hidden");
-      console.log("cacona2");
   }
 }
 
